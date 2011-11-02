@@ -1,0 +1,45 @@
+<h1>Calf List</h1>
+
+<table>
+  <tr class="yellow">
+    <th>Lotnum</th>
+    <th>Conthyp</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th>Sacrificedate</th>
+    <th>Pasys</th>
+    <th>Padias</th>
+    <th>Pamean</th>
+    <th>Aosys</th>
+    <th>Aodias</th>
+    <th>Aomean</th>
+    <th>Notes</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @calves.each do |calf| %>
+  <tr>
+    <td><%= calf.lotNum %></td>
+    <td><%= calf.contHyp %></td>
+    <td><%= calf.age %></td>
+    <td><%= calf.gender %></td>
+    <td><%= calf.sacrificeDate %></td>
+    <td><%= calf.pasys %></td>
+    <td><%= calf.padias %></td>
+    <td><%= calf.pamean %></td>
+    <td><%= calf.aosys %></td>
+    <td><%= calf.aodias %></td>
+    <td><%= calf.aomean %></td>
+    <td><%= calf.notes %></td>
+    <td><%= link_to 'Show', calf %></td>
+    <td><%= link_to 'Edit', edit_calf_path(calf) %></td>
+    <td><%= link_to 'Destroy', calf, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Calf', new_calf_path %>

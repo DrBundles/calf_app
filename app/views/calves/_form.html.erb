@@ -1,0 +1,65 @@
+<%= form_for(@calf) do |f| %>
+  <% if @calf.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@calf.errors.count, "error") %> prohibited this calf from being saved:</h2>
+
+      <ul>
+      <% @calf.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lotNum %><br />
+    <%= f.text_field :lotNum %>
+  </div>
+  <div class="field">
+    <%= f.label :contHyp %><br />
+    <%= f.text_field :contHyp %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br />
+    <%= f.text_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :sacrificeDate %><br />
+    <%= f.date_select :sacrificeDate %>
+  </div>
+  <div class="field">
+    <%= f.label :pasys %><br />
+    <%= f.text_field :pasys %>
+  </div>
+  <div class="field">
+    <%= f.label :padias %><br />
+    <%= f.text_field :padias %>
+  </div>
+  <div class="field">
+    <%= f.label :pamean %><br />
+    <%= f.text_field :pamean %>
+  </div>
+  <div class="field">
+    <%= f.label :aosys %><br />
+    <%= f.text_field :aosys %>
+  </div>
+  <div class="field">
+    <%= f.label :aodias %><br />
+    <%= f.text_field :aodias %>
+  </div>
+  <div class="field">
+    <%= f.label :aomean %><br />
+    <%= f.text_field :aomean %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
