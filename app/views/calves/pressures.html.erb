@@ -1,29 +1,28 @@
-<h1>Calf List</h1>
+<h1>Calf Pressures</h1>
 
 <table>
   <tr class="yellow">
-    <th>Lotnum</th>
-    <th>Pasys</th>
-    <th>Padias</th>
-    <th>Pamean</th>
-    <th>Aosys</th>
-    <th>Aodias</th>
-    <th>Aomean</th>
+    <th>Lot Number</th>
+    <th>PA Sys</th>
+    <th>PA Dias</th>
+    <th>PA Mean</th>
+    <th>AO Sys</th>
+    <th>AO Dias</th>
+    <th>AO mean</th>
     <th>Notes</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th colspan="3"></th>
   </tr>
 
 <% @calves.each do |calf| %>
   <tr>
+    <td><%= calf.lotNum %></td>
     <td><%= calf.pasys %></td>
     <td><%= calf.padias %></td>
     <td><%= calf.pamean %></td>
     <td><%= calf.aosys %></td>
     <td><%= calf.aodias %></td>
     <td><%= calf.aomean %></td>
-    <td><%= calf.notes %></td>
+    <td><%= calf.pressNotes %></td>
     <td><%= link_to 'Show', calf %></td>
     <td><%= link_to 'Edit', edit_calf_path(calf) %></td>
     <td><%= link_to 'Destroy', calf, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -33,4 +32,3 @@
 
 <br />
 
-<%= link_to 'New Calf', new_calf_path %>

@@ -2,6 +2,8 @@ CalfApp::Application.routes.draw do
   resources :calves
 
   root :to => 'calves#index'
+  
+  match '/pressures', :to => 'calves#pressures'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

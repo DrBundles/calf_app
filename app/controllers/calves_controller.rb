@@ -10,6 +10,17 @@ class CalvesController < ApplicationController
     end
   end
 
+  # GET /calves
+  # GET /calves.xml
+  def pressures
+    @calves = Calf.all
+
+    respond_to do |format|
+      format.html # pressures.html.erb
+      format.xml  { render :xml => @calves }
+    end
+  end
+
   # GET /calves/1
   # GET /calves/1.xml
   def show

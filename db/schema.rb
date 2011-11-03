@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111103005821) do
+ActiveRecord::Schema.define(:version => 20111103145756) do
 
   create_table "calves", :force => true do |t|
     t.string   "lotNum"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20111103005821) do
     t.float    "age"
     t.float    "hypDays"
     t.text     "notes"
+    t.text     "pressNotes"
   end
 
 end
