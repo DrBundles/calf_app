@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(:version => 20111103145756) do
     t.float    "aomean"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.float    "age"
-    t.float    "hypDays"
+    t.integer  "age"
+    t.integer  "hypDays"
     t.text     "notes"
     t.text     "pressNotes"
   end

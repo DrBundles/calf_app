@@ -1,6 +1,6 @@
 class AddAgeToCalf < ActiveRecord::Migration
   def self.up
-    add_column :calves, :age, :double
+    add_column :calves, :age, :integer
   end
 
   def self.down
