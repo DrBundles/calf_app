@@ -12,12 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :lotNum %><br />
+    <%= f.label :lotNum, 'Lot Number' %><br />
     <%= f.text_field :lotNum %>
   </div>
   <div class="field">
-    <%= f.label :contHyp %><br />
+    <%= f.label :contHyp, 'Control or Hypoxic' %><br />
     <%= f.text_field :contHyp %>
+  </div>
+  <div class="field">
+    <%= f.label :hypDays, 'Days of Hypoxia' %><br/>
+    <%= f.text_field :hypDays %>
   </div>
   <div class="field">
     <%= f.label :age %><br />
@@ -28,31 +32,31 @@
     <%= f.text_field :gender %>
   </div>
   <div class="field">
-    <%= f.label :sacrificeDate %><br />
+    <%= f.label :sacrificeDate, 'Sacrifice Date' %><br />
     <%= f.date_select :sacrificeDate %>
   </div>
   <div class="field">
-    <%= f.label :pasys %><br />
+    <%= f.label :pasys, 'PA Systolic (mmHg)' %><br />
     <%= f.text_field :pasys %>
   </div>
   <div class="field">
-    <%= f.label :padias %><br />
+    <%= f.label :padias, 'PA Diastolic (mmHg)' %><br />
     <%= f.text_field :padias %>
   </div>
   <div class="field">
-    <%= f.label :pamean %><br />
+    <%= f.label :pamean, 'PA Mean (mmHg)' %><br />
     <%= f.text_field :pamean %>
   </div>
   <div class="field">
-    <%= f.label :aosys %><br />
+    <%= f.label :aosys, 'AO Syltolic (mmHg)' %><br />
     <%= f.text_field :aosys %>
   </div>
   <div class="field">
-    <%= f.label :aodias %><br />
+    <%= f.label :aodias, 'AO Diastolic (mmHg)' %><br />
     <%= f.text_field :aodias %>
   </div>
   <div class="field">
-    <%= f.label :aomean %><br />
+    <%= f.label :aomean, 'AO Mean (mmHg)' %><br />
     <%= f.text_field :aomean %>
   </div>
   <div class="field">

@@ -2,18 +2,13 @@
 
 <table>
   <tr class="yellow">
-    <th>Lot</th>
-    <th>Cont or Hyp</th>
-    <th>Hyp Days</th>
-    <th>Age</th>
-    <th>Gender</th>
-    <th>Sac Date</th>
-    <th>PA Sys</th>
-    <th>PA Dias</th>
-    <th>PA Mean</th>
-    <th>AO Sys</th>
-    <th>AO Dias</th>
-    <th>AO Mean</th>
+    <th>Lotnum</th>
+    <th>Pasys</th>
+    <th>Padias</th>
+    <th>Pamean</th>
+    <th>Aosys</th>
+    <th>Aodias</th>
+    <th>Aomean</th>
     <th>Notes</th>
     <th></th>
     <th></th>
@@ -22,12 +17,6 @@
 
 <% @calves.each do |calf| %>
   <tr>
-    <td><%= calf.lotNum %></td>
-    <td><%= calf.contHyp %></td>
-    <td><%= calf.hypDays %></td>
-    <td><%= calf.age %></td>
-    <td><%= calf.gender %></td>
-    <td><%= calf.sacrificeDate %></td>
     <td><%= calf.pasys %></td>
     <td><%= calf.padias %></td>
     <td><%= calf.pamean %></td>

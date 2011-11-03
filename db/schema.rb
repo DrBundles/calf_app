@@ -10,12 +10,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111102154100) do
+ActiveRecord::Schema.define(:version => 20111103005821) do
 
   create_table "calves", :force => true do |t|
     t.string   "lotNum"
     t.string   "contHyp"
-    t.float    "age"
     t.string   "gender"
     t.date     "sacrificeDate"
     t.float    "pasys"
@@ -24,9 +23,11 @@ ActiveRecord::Schema.define(:version => 20111102154100) do
     t.float    "aosys"
     t.float    "aodias"
     t.float    "aomean"
-    t.float    "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "age"
+    t.float    "hypDays"
+    t.text     "notes"
   end
 
 end
