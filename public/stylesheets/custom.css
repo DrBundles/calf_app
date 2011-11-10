@@ -115,6 +115,24 @@ background-color:#EAF2D3;
 }
 
 
+
+/* -------------------------------
+ DESTROY BUTTON
+------------------------------- */
+#DestroyButton {
+  margin-left: auto;
+  margin-right: auto;
+  left: 10px;
+  position: relative;
+  text-align: center;
+  width: 190px;
+  color: #fff;
+  background: #006400;
+  font-size: 150%;
+  font-weight: bold;
+  padding: 20px;
+}
+
 /* -------------------------------
  ROUND CORNER
 ------------------------------- */

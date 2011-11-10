@@ -1,0 +1,12 @@
+
+<p>
+  <b>Spreadsheets</b>
+  <%= image_tag @import_export.attachment.url(:thumb) %>
+  <%= @import_export.attachment.url %>
+</p>
+
+<div>
+  <p>
+    <%= button_to 'Destroy', { :action => "destroy", :id => @import_export.id }, :confirm => 'Are you sure?', :method => :delete, :id => "DestroyButton", :class => "round" %>
+  </p>
+</div>

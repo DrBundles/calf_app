@@ -16,8 +16,8 @@
     <%= f.text_field :lotNum %>
   </div>
   <div class="field">
-    <%= f.label :contHyp, 'Control or Hypoxic' %><br />
-    <%= f.text_field :contHyp %>
+    <b>Select Atmospheric Conditions</b><br />
+    <%= f.select( :contHyp, ['Control', 'Hypoxic'], {:include_blank => true} ) %><br />
   </div>
   <div class="field">
     <%= f.label :hypDays, 'Days of Hypoxia' %><br/>
@@ -28,36 +28,28 @@
     <%= f.text_field :age %>
   </div>
   <div class="field">
-    <%= f.label :gender %><br />
-    <%= f.text_field :gender %>
+    <b>Select Gender</b><br />
+    <%= f.select( :gender, ['Male', 'Female'] ) %><br />
   </div>
   <div class="field">
     <%= f.label :sacrificeDate, 'Sacrifice Date' %><br />
     <%= f.date_select :sacrificeDate %>
   </div>
   <div class="field">
-    <%= f.label :pasys, 'PA Systolic (mmHg)' %><br />
-    <%= f.text_field :pasys %>
+    <%= f.label :base_HR, 'Atmospheric Heart Rate (bpm)' %><br />
+    <%= f.text_field :base_HR %>
   </div>
   <div class="field">
-    <%= f.label :padias, 'PA Diastolic (mmHg)' %><br />
-    <%= f.text_field :padias %>
+    <%= f.label :base_cardiacOutput, 'Atmospheric Cardiac Outupt (L/min)' %><br />
+    <%= f.text_field :base_cardiacOutput %>
   </div>
   <div class="field">
-    <%= f.label :pamean, 'PA Mean (mmHg)' %><br />
-    <%= f.text_field :pamean %>
+    <%= f.label :base_cardiacIndex, 'Atmospheric Cardiac Index' %><br />
+    <%= f.text_field :base_cardiacIndex %>
   </div>
   <div class="field">
-    <%= f.label :aosys, 'AO Syltolic (mmHg)' %><br />
-    <%= f.text_field :aosys %>
-  </div>
-  <div class="field">
-    <%= f.label :aodias, 'AO Diastolic (mmHg)' %><br />
-    <%= f.text_field :aodias %>
-  </div>
-  <div class="field">
-    <%= f.label :aomean, 'AO Mean (mmHg)' %><br />
-    <%= f.text_field :aomean %>
+    <%= f.label :base_mean_pap, 'Atmospheric Mean PAP (mmHg)' %><br />
+    <%= f.text_field :base_mean_pap %>
   </div>
   <div class="field">
     <%= f.label :notes %><br />

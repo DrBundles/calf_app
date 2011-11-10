@@ -1,0 +1,35 @@
+<h1>Import Spreadsheet</h1>
+
+<% form_for(@import_export, :html => { :multipart => true }) do |f| %>
+
+  <% if @import_export.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@import_export.errors.count, "error") %> prohibited this calf from being saved:</h2>
+
+      <ul>
+      <% @import_export.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.file_field :attachment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
+
+
+<!-- Button to upload new spreadsheet into database -->
+<div>
+  <p>
+    <%= button_to 'Load Spreadsheet', { :action=>"uploadData", :controller=>"calves" }, :confirm => 'Are you sure?', :class => "round" %>
+  </p>
+</div>
+
+
+<%= link_to 'Home', root_path %>

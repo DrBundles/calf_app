@@ -1,9 +1,15 @@
 CalfApp::Application.routes.draw do
   resources :calves
+  resources :import_exports
+
+  #get "import_exports/show"
+  #get "import_exports/new"
 
   root :to => 'calves#index'
   
   match '/pressures', :to => 'calves#pressures'
+  #match '/uploadData', :to => 'calves#index'
+  #match '/import_exports/new', :to => 'import_exports#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
