@@ -115,6 +115,27 @@ background-color:#EAF2D3;
 }
 
 
+.form_col {
+  background-color: #B7ED3F;
+}
+
+
+.form_col input {
+  color: #781351;
+  background: #fee3ad;
+  border: 1px solid #781351
+  margin: 10px 10px 10px 10px;
+  width: 10em;
+  
+}
+
+.form_col label {
+  margin: 10px;
+}
+
+.form_col .field {
+  margin: 10px;
+}
 
 /* -------------------------------
  DESTROY BUTTON

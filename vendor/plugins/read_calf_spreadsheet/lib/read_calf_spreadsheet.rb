@@ -7,6 +7,10 @@ class ReadCalfSpreadsheet
   #
   #   @import_export = ImportExport.find(params[:id])   
   #   data    = ReadCalfSpreadsheet.new( "", @import_export.attachment.path )
+  #     @tempData = ReadCalfSpreadsheet.new("", @ie.attachment.path)
+  #     realCalf = Calf.new(@tempData.sheetData[2])
+  #     realCalf.uploadData
+
   #require 'rubygems'
   #require 'spreadsheet'
 

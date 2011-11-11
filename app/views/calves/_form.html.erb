@@ -11,51 +11,116 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :lotNum, 'Lot Number' %><br />
-    <%= f.text_field :lotNum %>
+  <!-- ******************************************
+          GENERAL ANIMAL AND TEST DATA
+  *********************************************-->
+  <div class="span-20 last">
+    <div class="field">
+      <%= f.label :lotNum, 'Lot Number' %><br />
+      <%= f.text_field :lotNum %>
+    </div>
+    <div class="field">
+      <b>Select Atmospheric Conditions</b><br />
+      <%= f.select( :contHyp, ['Control', 'Hypoxic'], {:include_blank => true} ) %><br />
+    </div>
+    <div class="field">
+      <%= f.label :hypDays, 'Days of Hypoxia' %><br/>
+      <%= f.text_field :hypDays %>
+    </div>
+    <div class="field">
+      <%= f.label :age %><br />
+      <%= f.text_field :age %>
+    </div>
+    <div class="field">
+      <b>Select Gender</b><br />
+      <%= f.select( :gender, ['Male', 'Female'] ) %><br />
+    </div>
+    <div class="field">
+      <%= f.label :sacrificeDate, 'Sacrifice Date' %><br />
+      <%= f.date_select :sacrificeDate %>
+    </div>
   </div>
-  <div class="field">
-    <b>Select Atmospheric Conditions</b><br />
-    <%= f.select( :contHyp, ['Control', 'Hypoxic'], {:include_blank => true} ) %><br />
+
+
+  <!-- ******************************************
+          ATMOSPHERIC ALTITUDE DATA
+  *********************************************-->
+  <div class="span-8 push-1 form_col round">
+    <div class="field">
+      <%= f.label :base_HR, 'Atmospheric Heart Rate (bpm)' %><br />
+      <%= f.text_field :base_HR %>
+    </div>
+    <div class="field">
+      <%= f.label :base_cardiacOutput, 'Atmospheric Cardiac Outupt (L/min)' %><br />
+      <%= f.text_field :base_cardiacOutput %>
+    </div>
+    <div class="field">
+      <%= f.label :base_cardiacIndex, 'Atmospheric Cardiac Index' %><br />
+      <%= f.text_field :base_cardiacIndex %>
+    </div>
+    <div class="field">
+      <%= f.label :base_mean_pap, 'Atmospheric Mean PAP (mmHg)' %><br />
+      <%= f.text_field :base_mean_pap %>
+    </div>
+    <div class="field">
+      <%= f.label :base_sys_pap, 'Atmospheric Systolic PAP (mmHg)' %><br />
+      <%= f.text_field :base_sys_pap %>
+    </div>
+    <div class="field">
+      <%= f.label :base_dias_pap, 'Atmospheric Diastolic PAP (mmHg)' %><br />
+      <%= f.text_field :base_dias_pap %>
+    </div>
+    <div class="field">
+      <%= f.label :base_pulse_pap, 'Atmospheric Pulse PAP (mmHg)' %><br />
+      <%= f.text_field :base_pulse_pap %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :hypDays, 'Days of Hypoxia' %><br/>
-    <%= f.text_field :hypDays %>
+
+  <!-- ******************************************
+          HIGH ALTITUDE DATA
+  *********************************************-->
+  <div class="span-8 push-3 last form_col round">
+    <div class="field">
+      <%= f.label :alt_HR, 'High Altitude Heart Rate (bpm)' %><br />
+      <%= f.text_field :alt_HR %>
+    </div>
+    <div class="field">
+      <%= f.label :alt_cardiacOutput, 'High Altitude Cardiac Outupt (L/min)' %><br />
+      <%= f.text_field :alt_cardiacOutput %>
+    </div>
+    <div class="field">
+      <%= f.label :alt_cardiacIndex, 'High Altitude Cardiac Index' %><br />
+      <%= f.text_field :alt_cardiacIndex %>
+    </div>
+    <div class="field">
+      <%= f.label :alt_mean_pap, 'High Altitude Mean PAP (mmHg)' %><br />
+      <%= f.text_field :alt_mean_pap %>
+    </div>
+    <div class="field">
+      <%= f.label :alt_sys_pap, 'High Altitude Systolic PAP (mmHg)' %><br />
+      <%= f.text_field :alt_sys_pap %>
+    </div>
+    <div class="field">
+      <%= f.label :alt_dias_pap, 'High Altitude Diastolic PAP (mmHg)' %><br />
+      <%= f.text_field :alt_dias_pap %>
+    </div>
+    <div class="field">
+      <%= f.label :alt_pulse_pap, 'High Altitude Pulse PAP (mmHg)' %><br />
+      <%= f.text_field :alt_pulse_pap %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :age %><br />
-    <%= f.text_field :age %>
-  </div>
-  <div class="field">
-    <b>Select Gender</b><br />
-    <%= f.select( :gender, ['Male', 'Female'] ) %><br />
-  </div>
-  <div class="field">
-    <%= f.label :sacrificeDate, 'Sacrifice Date' %><br />
-    <%= f.date_select :sacrificeDate %>
-  </div>
-  <div class="field">
-    <%= f.label :base_HR, 'Atmospheric Heart Rate (bpm)' %><br />
-    <%= f.text_field :base_HR %>
-  </div>
-  <div class="field">
-    <%= f.label :base_cardiacOutput, 'Atmospheric Cardiac Outupt (L/min)' %><br />
-    <%= f.text_field :base_cardiacOutput %>
-  </div>
-  <div class="field">
-    <%= f.label :base_cardiacIndex, 'Atmospheric Cardiac Index' %><br />
-    <%= f.text_field :base_cardiacIndex %>
-  </div>
-  <div class="field">
-    <%= f.label :base_mean_pap, 'Atmospheric Mean PAP (mmHg)' %><br />
-    <%= f.text_field :base_mean_pap %>
-  </div>
-  <div class="field">
-    <%= f.label :notes %><br />
-    <%= f.text_area :notes %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+
+
+  <!-- ******************************************
+          NOTES AND SUBMIT BUTTON
+  *********************************************-->
+  <div class="span-20 last">
+    <div class="field">
+      <%= f.label :notes %><br />
+      <%= f.text_area :notes %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
   </div>
 <% end %>
